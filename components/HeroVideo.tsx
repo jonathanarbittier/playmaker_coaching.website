@@ -42,12 +42,16 @@ export function HeroVideo() {
 
   return (
     <>
-      <img
-        className="hero-mobile-fallback"
-        src="/images/playmaker-hero-mobile.webp"
-        alt=""
-        aria-hidden="true"
-      />
+      {!playing && (
+        <img
+          className="hero-mobile-fallback"
+          src="/images/playmaker-hero-mobile.webp"
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          fetchPriority="high"
+        />
+      )}
       <video
         ref={ref}
         className={`hero-media ${playing ? "is-playing" : ""}`}
