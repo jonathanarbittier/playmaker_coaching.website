@@ -43,14 +43,20 @@ export function HeroVideo() {
   return (
     <>
       {!playing && (
-        <img
+        <span
           className="hero-mobile-fallback"
-          src="/images/playmaker-hero-mobile.webp"
-          alt=""
           aria-hidden="true"
-          decoding="async"
-          fetchPriority="high"
-        />
+        >
+          <span className="hero-mobile-sprite-y">
+            <img
+              className="hero-mobile-sprite"
+              src="/images/playmaker-hero-mobile-sprite.webp"
+              alt=""
+              draggable="false"
+              decoding="async"
+            />
+          </span>
+        </span>
       )}
       <video
         ref={ref}
