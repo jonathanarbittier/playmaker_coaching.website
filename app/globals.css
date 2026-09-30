@@ -80,7 +80,6 @@ h1, h2, h3 { margin: 0; font-family: "Barlow Condensed", "Arial Narrow", sans-se
 .reveal { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero-media { display: none; }
   * { animation: none !important; transition-duration: .01ms !important; }
 }
 
