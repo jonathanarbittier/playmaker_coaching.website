@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function HeroVideo() {
   const ref = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     const video = ref.current;
@@ -40,15 +41,23 @@ export function HeroVideo() {
   }, []);
 
   return (
-    <video
-      ref={ref}
-      className="hero-media"
-      autoPlay muted loop playsInline preload="auto"
-      poster="/images/playmaker-hero-poster.jpg"
-      aria-hidden="true"
-    >
-      <source src="/videos/playmaker-hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
-      <source src="/videos/playmaker-hero.mp4" type="video/mp4" />
-    </video>
+    <>
+      <img
+        className="hero-mobile-fallback"
+        src="/images/playmaker-hero-mobile.webp"
+        alt=""
+        aria-hidden="true"
+      />
+      <video
+        ref={ref}
+        className={`hero-media ${playing ? "is-playing" : ""}`}
+        autoPlay muted loop playsInline preload="auto"
+        onPlaying={() => setPlaying(true)}
+        aria-hidden="true"
+      >
+        <source src="/videos/playmaker-hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+        <source src="/videos/playmaker-hero.mp4" type="video/mp4" />
+      </video>
+    </>
   );
 }
