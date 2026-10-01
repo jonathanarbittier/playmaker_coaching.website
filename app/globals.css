@@ -18,7 +18,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-barlow-condensed), "Arial Narrow
 .site-header--solid { height: 4.5rem; background: rgba(10,12,10,.96); backdrop-filter: blur(12px); }
 .wordmark { position: relative; z-index: 2; display: flex; flex-direction: column; width: min-content; font-family: var(--font-barlow-condensed), sans-serif; line-height: .75; }
 .wordmark span { font-size: 1.58rem; font-weight: 800; letter-spacing: -.03em; }
-.wordmark small { margin-top: .45rem; font-family: Inter, sans-serif; font-size: .42rem; letter-spacing: .2em; white-space: nowrap; }
+.wordmark small { margin-top: .45rem; font-family: var(--font-inter), sans-serif; font-size: .42rem; letter-spacing: .2em; white-space: nowrap; }
 .desktop-nav { display: none; }
 .menu-button { position: relative; z-index: 2; display: flex; align-items: center; gap: .7rem; border: 0; padding: .8rem 0 .8rem .8rem; color: white; background: none; cursor: pointer; font-size: .66rem; font-weight: 600; letter-spacing: .12em; }
 .menu-button i, .menu-button i::after { display: block; width: 1.35rem; height: 1px; background: currentColor; transition: transform .25s ease; }
@@ -29,7 +29,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-barlow-condensed), "Arial Narrow
 .mobile-menu.is-open { opacity: 1; visibility: visible; transform: none; }
 .mobile-menu nav { border-top: 1px solid #33362f; }
 .mobile-menu nav a { display: flex; align-items: baseline; gap: 1.2rem; padding: .7rem 0; border-bottom: 1px solid #33362f; font-family: var(--font-barlow-condensed); font-size: clamp(3.3rem, 16vw, 5.5rem); font-weight: 600; line-height: .9; letter-spacing: -.035em; }
-.mobile-menu nav small { width: 1rem; font-family: Inter; font-size: .55rem; letter-spacing: .1em; color: #8e9188; }
+.mobile-menu nav small { width: 1rem; font-family: var(--font-inter); font-size: .55rem; letter-spacing: .1em; color: #8e9188; }
 .mobile-enquire { display: flex; align-items: center; justify-content: space-between; padding: 1.15rem 1.25rem; color: var(--ink); background: var(--acid); font-size: .7rem; font-weight: 600; letter-spacing: .08em; }
 .mobile-enquire svg { width: 1.2rem; }
 
@@ -71,7 +71,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-barlow-condensed), "Arial Narrow
 .footer-top { display: flex; flex-direction: column; gap: 4.5rem; }
 .footer-brand { display: flex; flex-direction: column; width: min-content; font-family: var(--font-barlow-condensed); line-height: .72; }
 .footer-brand span { font-size: clamp(4rem, 21vw, 7rem); font-weight: 800; letter-spacing: -.05em; }
-.footer-brand small { margin-top: 1.2rem; font-family: Inter; font-size: .62rem; letter-spacing: .28em; white-space: nowrap; }
+.footer-brand small { margin-top: 1.2rem; font-family: var(--font-inter); font-size: .62rem; letter-spacing: .28em; white-space: nowrap; }
 .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .footer-links div { display: flex; flex-direction: column; align-items: flex-start; gap: .8rem; }
 .footer-links a { font-size: .76rem; }
